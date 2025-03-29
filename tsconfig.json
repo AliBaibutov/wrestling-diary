@@ -8,6 +8,12 @@
     },
     {
       "path": "./apps/wrestling-diary"
+    },
+    {
+      "path": "./apps/wrest-server-e2e"
+    },
+    {
+      "path": "./apps/wrest-server"
     }
   ]
 }
