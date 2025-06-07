@@ -29,7 +29,8 @@
           "buildDepsName": "build-deps",
           "watchDepsName": "watch-deps"
         }
-      }
+      },
+      "exclude": ["shared/*"]
     },
     {
       "plugin": "@nx/react/router-plugin",
@@ -84,6 +85,15 @@
         "targetName": "test"
       },
       "exclude": ["apps/wrest-server-e2e/**/*"]
+    },
+    {
+      "plugin": "@nx/js/typescript",
+      "include": ["shared/*"],
+      "options": {
+        "typecheck": {
+          "targetName": "typecheck"
+        }
+      }
     }
   ],
   "targetDefaults": {
@@ -107,7 +117,8 @@
       },
       "library": {
         "style": "tailwind",
-        "linter": "eslint"
+        "linter": "eslint",
+        "unitTestRunner": "jest"
       }
     }
   }

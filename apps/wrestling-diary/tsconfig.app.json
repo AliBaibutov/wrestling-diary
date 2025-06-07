@@ -11,7 +11,14 @@
       "@nx/react/typings/image.d.ts",
       "vite/client"
     ],
-    "rootDir": "src"
+    "rootDir": "src",
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   },
   "exclude": [
     "out-tsc",
